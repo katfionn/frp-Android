@@ -9,16 +9,8 @@ auth.token = "88888888"
 level = "debug"
 disablePrintColor = true
 
-[[visitors]]
-name = "p2p_visitor"
-type = "xtcp"
-serverName = "21.inobi.icu"
-secretKey = ""
-bindAddr = "127.0.0.1"
-bindPort = 5083
-
 [[proxies]]
-name = "PAD-NDJEKAJ2408"
+name = "PAD-NDJEKAJ2488"
 type = "tcp"
 localIP = "127.0.0.1"
 localPort = 5555
