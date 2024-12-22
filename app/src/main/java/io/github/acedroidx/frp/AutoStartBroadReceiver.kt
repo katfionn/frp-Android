@@ -11,7 +11,7 @@ class AutoStartBroadReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         //开机启动
         val editor = context.getSharedPreferences("data", AppCompatActivity.MODE_PRIVATE)
-        val auto_start = editor.getBoolean("auto_start", false)
+        val auto_start = editor.getBoolean("auto_start", true)
         if (ACTION == intent.action && auto_start) {
             //开机启动
             val mainIntent = Intent(context, ShellService::class.java)
