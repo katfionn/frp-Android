@@ -1,6 +1,9 @@
-serverAddr = ""
+serverAddr = "43.156.18.225"
 serverPort = 7000
-dnsServer = "114.114.114.114"
+transport.dialServerTimeout = 60
+loginFailExit = false
+auth.method = "token"
+auth.token = "88888888"
 
 [log]
 level = "debug"
@@ -9,7 +12,13 @@ disablePrintColor = true
 [[visitors]]
 name = "p2p_visitor"
 type = "xtcp"
-serverName = ""
+serverName = "21.inobi.icu"
 secretKey = ""
 bindAddr = "127.0.0.1"
-bindPort = 6000
+bindPort = 5083
+
+[[proxies]]
+name = "PAD-NDJEKAJ2408"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 5555
