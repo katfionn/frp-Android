@@ -10,7 +10,7 @@ level = "debug"
 disablePrintColor = true
 
 [[proxies]]
-name = "PAD-NDJEKAJ2488"
+name = "PAD-AUTOSTARTTEST"
 type = "tcp"
 localIP = "127.0.0.1"
 localPort = 5555
