@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auto_start_switch: SwitchCompat
 
     private lateinit var mService: ShellService
-    private var mBound: Boolean = true
+    private var mBound: Boolean = false
 
     /** Defines callbacks for service binding, passed to bindService()  */
     private val connection = object : ServiceConnection {
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         state_switch.setOnCheckedChangeListener { buttonView, isChecked -> if (isChecked) (startShell()) else (stopShell()) }
         val editor = getSharedPreferences("data", AppCompatActivity.MODE_PRIVATE)
         auto_start_switch = findViewById<SwitchCompat>(R.id.auto_start_switch)
-        auto_start_switch.isChecked = editor.getBoolean("auto_start", true)
+        auto_start_switch.isChecked = editor.getBoolean("auto_start", false)
         auto_start_switch.setOnCheckedChangeListener { buttonView, isChecked ->
             val editor = editor.edit()
             editor.putBoolean("auto_start", isChecked)
