@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auto_start_switch: SwitchCompat
 
     private lateinit var mService: ShellService
-    private var mBound: Boolean = false
+    private var mBound: Boolean = true
 
     /** Defines callbacks for service binding, passed to bindService()  */
     private val connection = object : ServiceConnection {
